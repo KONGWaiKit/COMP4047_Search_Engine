@@ -58,6 +58,7 @@ public class Extract_URL {
 					boolean add_URL = true;
 					for (int k = 0; k < blacklist_URL.size(); k++) {
 						if (correctedURL.contains(blacklist_URL.get(k))) {
+							System.out.println(correctedURL + " Blocked");
 							add_URL = false;
 							break;
 						}

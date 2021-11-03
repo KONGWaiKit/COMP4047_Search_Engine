@@ -17,12 +17,9 @@ public class Extract_URL {
 			
 			while(reader.hasNextLine()) {
 				String blockedURL = reader.nextLine();
-				if(blockedURL.charAt(blockedURL.length() - 1) == '*') {
-					blockedURL = blockedURL.substring(0, blockedURL.length() - 1);
-				}
 				blacklist_URL.add(blockedURL);
 			}
-			reader.close();
+			
 		}catch (IOException error) {
 			System.out.println(error);
 		}
@@ -54,18 +51,7 @@ public class Extract_URL {
 					if(!correctedURL.contains("https://") && !correctedURL.contains("http://")) {
 						correctedURL = base_URL + correctedURL;
 					}
-					
-					boolean add_URL = true;
-					for (int k = 0; k < blacklist_URL.size(); k++) {
-						if (correctedURL.contains(blacklist_URL.get(k))) {
-							add_URL = false;
-							break;
-						}
-					}
-					
-					if (add_URL) {
-						result_List.add(correctedURL);
-					}
+					result_List.add(correctedURL);
 				}
 				
 			}

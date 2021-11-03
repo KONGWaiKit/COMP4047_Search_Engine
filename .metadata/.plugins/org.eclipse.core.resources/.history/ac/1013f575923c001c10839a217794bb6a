@@ -6,7 +6,7 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		Pool pool = new Pool(20,20,"https://www.comp.hkbu.edu.hk/v1");
+		Pool pool = new Pool(10000,10000,"https://www.pornhub.com");
 		Extract_Webpage_Elements webpageExtractor = new Extract_Webpage_Elements();
 		Database db = new Database(".."); // Provide path to create database
 

@@ -26,7 +26,7 @@ public class Database {
 			while(reader.hasNextLine()) {
 				blacklist_Words.add(reader.nextLine());
 			}
-			reader.close();
+			
 			System.out.println("Database Created:" + db_Path + "\\" + db_Txt.getName());
 			
 		}catch (IOException error) {

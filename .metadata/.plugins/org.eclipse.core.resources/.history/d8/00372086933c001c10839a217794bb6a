@@ -2,6 +2,7 @@ package Search_Engine;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -26,7 +27,7 @@ public class Database {
 			while(reader.hasNextLine()) {
 				blacklist_Words.add(reader.nextLine());
 			}
-			reader.close();
+			
 			System.out.println("Database Created:" + db_Path + "\\" + db_Txt.getName());
 			
 		}catch (IOException error) {

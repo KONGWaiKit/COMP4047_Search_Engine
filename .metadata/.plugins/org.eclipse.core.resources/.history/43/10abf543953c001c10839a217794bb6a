@@ -55,17 +55,13 @@ public class Extract_URL {
 						correctedURL = base_URL + correctedURL;
 					}
 					
-					boolean add_URL = true;
-					for (int k = 0; k < blacklist_URL.size(); k++) {
-						if (correctedURL.contains(blacklist_URL.get(k))) {
-							add_URL = false;
-							break;
+					for(int k=0; k<blacklist_URL.size(); k++ ) {
+						if(correctedURL.contains(blacklist_URL.get(k))) {
+							
 						}
 					}
 					
-					if (add_URL) {
-						result_List.add(correctedURL);
-					}
+					result_List.add(correctedURL);
 				}
 				
 			}

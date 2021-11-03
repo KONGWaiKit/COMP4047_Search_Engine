@@ -20,6 +20,7 @@ public class Extract_URL {
 				if(blockedURL.charAt(blockedURL.length() - 1) == '*') {
 					blockedURL = blockedURL.substring(0, blockedURL.length() - 1);
 				}
+				System.out.println(blockedURL);
 				blacklist_URL.add(blockedURL);
 			}
 			reader.close();

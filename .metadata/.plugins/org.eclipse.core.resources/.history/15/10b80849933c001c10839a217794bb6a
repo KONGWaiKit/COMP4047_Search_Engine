@@ -3,30 +3,14 @@ package Search_Engine;
 import java.util.LinkedList;
 import java.io.File;
 import java.util.Scanner;
-import java.io.IOException;
 
 public class Extract_URL {
 	
 	LinkedList<String> blacklist_URL = new LinkedList<String>();
 	
 	Extract_URL(){
-		
-		try {
-			File blacklist_URL_File = new File("BlackListUrls.txt");
-			Scanner reader = new Scanner (blacklist_URL_File);
-			
-			while(reader.hasNextLine()) {
-				String blockedURL = reader.nextLine();
-				if(blockedURL.charAt(blockedURL.length() - 1) == '*') {
-					blockedURL = blockedURL.substring(0, blockedURL.length() - 1);
-				}
-				blacklist_URL.add(blockedURL);
-			}
-			reader.close();
-		}catch (IOException error) {
-			System.out.println(error);
-		}
-
+		File blacklist_URL_File = new File("BlackListUrls");
+		Scanner reader = new Scanner (blacklist_URL_File);
 	}
 	
 	LinkedList<String> extract_URL(LinkedList<String> all_Tag, String url_String) {
@@ -54,18 +38,7 @@ public class Extract_URL {
 					if(!correctedURL.contains("https://") && !correctedURL.contains("http://")) {
 						correctedURL = base_URL + correctedURL;
 					}
-					
-					boolean add_URL = true;
-					for (int k = 0; k < blacklist_URL.size(); k++) {
-						if (correctedURL.contains(blacklist_URL.get(k))) {
-							add_URL = false;
-							break;
-						}
-					}
-					
-					if (add_URL) {
-						result_List.add(correctedURL);
-					}
+					result_List.add(correctedURL);
 				}
 				
 			}
