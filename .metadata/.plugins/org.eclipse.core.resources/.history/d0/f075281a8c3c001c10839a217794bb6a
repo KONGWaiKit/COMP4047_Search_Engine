@@ -50,7 +50,6 @@ public class Database {
 				db_BufferedWriter.write(data.get(i)[1]);
 				db_BufferedWriter.write(",./.,|eD");
 				db_BufferedWriter.write(data.get(i)[2]);
-				db_BufferedWriter.newLine();
 			}
 			
 			db_BufferedWriter.close();

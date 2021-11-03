@@ -42,7 +42,7 @@ public class Database {
 			BufferedWriter db_BufferedWriter = new BufferedWriter(new FileWriter(db_Txt,true));
 			for(int i = 0; i < data.size(); i++) {
 				
-				if(blacklist_Words.contains(data.get(i)[2])) {continue;}
+				if(blacklist_Words.contains(data.get(i)[2])) {System.out.println(data.get(i)[2] + "blocked"); continue;}
 				
 				db_BufferedWriter.write(",./.,|dE");
 				db_BufferedWriter.write(data.get(i)[0]);

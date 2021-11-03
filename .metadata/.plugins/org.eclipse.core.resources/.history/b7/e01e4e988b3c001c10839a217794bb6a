@@ -11,7 +11,7 @@ import java.util.LinkedList;
 public class Database {
 	
 	File db_Txt;
-	LinkedList<String> blacklist_Words = new LinkedList<String>();
+	String blacklist_Words[];
 	
 	Database(String db_Path){
 		db_Txt = new File(db_Path + "\\Search_Engine_Database.txt");
@@ -22,10 +22,10 @@ public class Database {
 				db_Txt.createNewFile();
 			}
 			
-			File blacklist_File = new File("BlackListWords.txt");
+			File blacklist_File = new File("BlackListWords");
 			Scanner reader = new Scanner(blacklist_File);
 			while(reader.hasNextLine()) {
-				blacklist_Words.add(reader.nextLine());
+				System.out.println(reader.nextLine());
 			}
 			
 			System.out.println("Database Created:" + db_Path + "\\" + db_Txt.getName());
@@ -41,16 +41,12 @@ public class Database {
 		try {
 			BufferedWriter db_BufferedWriter = new BufferedWriter(new FileWriter(db_Txt,true));
 			for(int i = 0; i < data.size(); i++) {
-				
-				if(blacklist_Words.contains(data.get(i)[2])) {continue;}
-				
 				db_BufferedWriter.write(",./.,|dE");
 				db_BufferedWriter.write(data.get(i)[0]);
 				db_BufferedWriter.write(",./.,|eD");
 				db_BufferedWriter.write(data.get(i)[1]);
 				db_BufferedWriter.write(",./.,|eD");
 				db_BufferedWriter.write(data.get(i)[2]);
-				db_BufferedWriter.newLine();
 			}
 			
 			db_BufferedWriter.close();
