@@ -28,9 +28,9 @@ public class Database {
 	}
 	
 	void push(LinkedList<String[]> data){
+		
 		try {
-			BufferedWriter db_BufferedWriter = new BufferedWriter(new FileWriter(db_Txt));
-			
+			BufferedWriter db_BufferedWriter = new BufferedWriter(new FileWriter(db_Txt,true));
 			for(int i = 0; i < data.size(); i++) {
 				db_BufferedWriter.write(",./.,|dE");
 				db_BufferedWriter.write(data.get(i)[0]);

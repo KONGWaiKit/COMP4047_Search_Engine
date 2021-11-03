@@ -49,10 +49,8 @@ class Extract_Webpage_Elements extends HTMLEditorKit.ParserCallback {
 			
 			//Extract Image Call
 			this.extractedImage = imageExtractor.extract_Image(callback.all_Tag, urlString);
-			
 			//Extract URL Call
 			this.extractedURL = urlExtractor.extract_URL(callback.all_Tag, urlString);
-			System.out.println("URL_Extractor:" + extractedURL);
 			
 			//Extract Video Call
 			

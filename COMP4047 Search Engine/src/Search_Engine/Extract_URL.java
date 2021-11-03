@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class Extract_URL {
 	
 	LinkedList<String> extract_URL(LinkedList<String> all_Tag, String url_String) {
-		
+				
 		LinkedList<String> result_List = new LinkedList<String>();
 		String base_URL = url_String;
 		if (base_URL.charAt(base_URL.length() - 1) != '/') {

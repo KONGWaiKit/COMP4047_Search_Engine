@@ -6,6 +6,7 @@ public class Extract_Image {
 	
 	LinkedList<String[]> extract_Image(LinkedList<String> all_Tag, String url_String) {
 		
+		
 		LinkedList<String[]> result_List = new LinkedList<String[]>();
 		
 		String base_URL = url_String;
@@ -59,9 +60,14 @@ public class Extract_Image {
 				result_List.add(current_Result);
 			}
 			
+			
 			if(image_ALT != "") {
-				String [] current_Result = new String[] {"img",image_URL,image_ALT};
-				result_List.add(current_Result);
+				String [] split_ALT = image_ALT.split(" ");
+				for(int j = 0; j < split_ALT.length; j++) {
+					String [] current_Result = new String[] {"img",image_URL,split_ALT[j]};
+					result_List.add(current_Result);
+				}
+				
 			}
 
 		}
