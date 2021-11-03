@@ -1,0 +1,20 @@
+package Search_Engine;
+import java.io.IOException;
+import java.net.URL;
+
+public class Read_Web_Page {
+	
+	public String load_Web_Page (String url_String) {
+		
+		byte [] buffer = new byte [1024];
+		String result = "";
+			URL url = new URL(url_String)
+		try {
+			URL 
+		}catch (IOException error){
+			
+		}
+		
+		return result;
+	}
+}

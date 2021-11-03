@@ -1,0 +1,10 @@
+package Search_Engine;
+
+public class Read_Web_Page {
+	
+	public String load_Web_Page (String url) {
+		
+		
+		return "";
+	}
+}

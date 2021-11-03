@@ -1,0 +1,12 @@
+package Search_Engine;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Pool {
+	Queue<String> url_Pool = new LinkedList<String>();
+	Queue<String> processed_URL_Pool = new LinkedList<String>();
+	
+	void add_URL_Pool (String url) {
+		
+	}
+}

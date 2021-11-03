@@ -1,0 +1,34 @@
+package Search_Engine;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Pool {
+	Queue<String> url_Pool = new LinkedList<String>();
+	Queue<String> processed_URL_Pool = new LinkedList<String>();
+	
+	void offer_URL_Pool (String url) {
+		url_Pool.offer(url);
+	}
+	
+	void offer_URL_Pool (LinkedList<String> list) {
+		for(int i = 0; i < list.size(); i++) {
+			
+		}
+	}
+	
+	String poll_URL_Pool() {
+		return url_Pool.poll();
+	}
+	
+	int count_URL_Pool() {
+		return url_Pool.size();
+	}
+	
+	void offer_Processed_URL_Pool (String url) {
+		processed_URL_Pool.offer(url);
+	}
+	
+	String poll_Processed_URL_Pool() {
+		return processed_URL_Pool.poll();
+	}
+}

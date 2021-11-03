@@ -1,0 +1,35 @@
+package Search_Engine;
+
+import java.util.LinkedList;
+
+public class Extract_URL {
+	
+	void extract_URL(LinkedList<String> all_Tag, String url_String) {
+		
+		String base_URL = url_String;
+		if (base_URL.charAt(base_URL.length() - 1) != "/")
+				
+		for(int i=0; i<all_Tag.size(); i++) {
+			
+			String[] tag_Elements = all_Tag.get(i).split(" ");
+			
+			if(tag_Elements[0].equals("img")) {continue;}
+			
+			for(int j=0; j<tag_Elements.length; j++) {
+				
+				if(tag_Elements[j].contains("href=")) {
+					
+					String correctedURL = tag_Elements[j].replace("href=", "");
+					if(!correctedURL.contains("https://") || !correctedURL.contains("http://")) {
+						correctedURL = base_URL + correctedURL;
+					}
+					System.out.println(correctedURL);
+					
+				}
+				
+			}
+
+		}
+				
+	}
+}

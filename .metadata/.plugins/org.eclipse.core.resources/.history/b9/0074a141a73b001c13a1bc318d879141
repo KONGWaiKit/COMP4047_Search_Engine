@@ -1,0 +1,36 @@
+package Search_Engine;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import javax.swing.text.html.*;
+import javax.swing.text.html.HTML.*;
+import javax.swing.text.html.HTMLEditorKit.*;
+import javax.swing.text.html.parser.*;
+import javax.swing.text.*;
+
+
+public class Read_Web_Page extends HTMLEditorKit.ParserCallback {
+	
+	String load_Web_Page (String url_String) {
+		
+		byte [] buffer = new byte [1024];
+		String result = "";
+			
+		try {
+			
+			InputStream input_Stream = new URL(url_String).openStream();
+			int length;
+			
+			while((length = input_Stream.read(buffer)) != -1)
+				result += new String(buffer);
+
+			
+		}catch (IOException error){
+			result = "<h1>Unable to download the page</h1>" + url_String;
+		}
+		
+		return result;
+	}
+	
+	
+}

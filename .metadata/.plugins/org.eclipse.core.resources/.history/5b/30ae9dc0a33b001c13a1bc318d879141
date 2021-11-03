@@ -1,0 +1,8 @@
+package Search_Engine;
+
+public class Read_Web_Page {
+	
+	public string load_Web_Page () {
+		
+	}
+}
