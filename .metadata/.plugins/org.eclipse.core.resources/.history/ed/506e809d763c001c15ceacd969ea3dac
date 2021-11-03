@@ -1,0 +1,30 @@
+package Search_Engine;
+import java.io.File;
+import java.io.IOException;
+
+
+public class Push_Database {
+	
+	File db_Txt;
+	
+	Push_Database(String db_Path){
+		db_Txt = new File(db_Path + "\\Search_Engine_Database.txt");
+		
+		try {
+			if(!db_Txt.createNewFile()) {
+				db_Txt.delete();
+				db_Txt.createNewFile();
+			}
+			
+			System.out.println("Database Created:" + db_Path + "\\" + db_Txt.getName());
+			
+		}catch (IOException error) {
+			
+		}
+
+	}
+	
+	void push() {
+		
+	}
+}

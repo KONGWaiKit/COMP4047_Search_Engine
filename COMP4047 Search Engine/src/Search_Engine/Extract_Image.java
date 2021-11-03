@@ -54,8 +54,15 @@ public class Extract_Image {
 				
 			}	
 			
-			String [] current_Result = new String[] {image_URL,image_Name,image_ALT};
-			result_List.add(current_Result);
+			if(image_Name!= "") {
+				String [] current_Result = new String[] {"img",image_URL,image_Name};
+				result_List.add(current_Result);
+			}
+			
+			if(image_ALT != "") {
+				String [] current_Result = new String[] {"img",image_URL,image_ALT};
+				result_List.add(current_Result);
+			}
 
 		}
 		

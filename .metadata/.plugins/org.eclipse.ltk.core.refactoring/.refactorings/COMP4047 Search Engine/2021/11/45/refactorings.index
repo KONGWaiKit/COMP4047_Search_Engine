@@ -6,3 +6,5 @@
 1635844743791	Rename method 'start_Catching'
 1635844752602	Rename method 'start_Extract'
 1635844777182	Rename field 'tag'
+1635927838189	Rename type 'Push_Database'
+1635927849021	Rename local variable 'dbPusher'
